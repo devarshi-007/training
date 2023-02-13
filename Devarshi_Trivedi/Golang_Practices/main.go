@@ -33,6 +33,5 @@ func main() {
 	//local_or_utc()
 	//func_pass()
 	//any_store_var()
-	panic_recover()
-
+	//panic_recover()
 }
