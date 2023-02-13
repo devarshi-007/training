@@ -4,7 +4,7 @@ import "main/webService"
 
 func main() {
 	// module 1
-	// module1.Main()
+	 module1.Main()
 
 	// module 2
 	// module2.Main()
