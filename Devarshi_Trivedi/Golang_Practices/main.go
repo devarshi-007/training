@@ -32,4 +32,7 @@ func main() {
 	//taking_user_input()
 	//local_or_utc()
 	//func_pass()
+	//any_store_var()
+	panic_recover()
+
 }
