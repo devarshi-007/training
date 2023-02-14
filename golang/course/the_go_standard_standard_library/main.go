@@ -2,10 +2,16 @@ package main
 
 import (
 	"fmt"
-	"main/module1"
+	"main/module3"
 )
 
 func main() {
 	fmt.Println("welcome to the go standard library")
-	module1.Main()
+
+	// module1.Main()
+
+	// module2.Main()
+
+	module3.Main()
+
 }

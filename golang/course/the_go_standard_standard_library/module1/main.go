@@ -9,7 +9,8 @@ func Main() {
 
 	// runtimeArgs()
 
-	flagDemo()
+	// flagDemo()
 
-	fmt.Println("\nend of the module 1")
+	readFile()
+	fmt.Println("\nend of the module1")
 }
