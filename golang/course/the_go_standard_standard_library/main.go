@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"main/module5"
+	"main/module6"
 )
 
 func main() {
@@ -16,5 +16,7 @@ func main() {
 
 	// module4.Main()
 
-	module5.Main()
+	// module5.Main()
+
+	module6.Main()
 }
