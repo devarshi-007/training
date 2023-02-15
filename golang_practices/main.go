@@ -2,6 +2,10 @@ package main
 
 func main() {
 	//helloworld()
-	variable()
-
+	//variable()
+	//pointer()
+	//constant()
+	//array()
+	//mapex()
+	struct1()
 }
