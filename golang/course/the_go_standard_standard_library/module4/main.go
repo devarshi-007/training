@@ -3,6 +3,7 @@ package module4
 import "fmt"
 
 func Main() {
+
 	dateAndTime()
 
 	timeStamp()
