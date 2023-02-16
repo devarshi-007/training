@@ -7,5 +7,8 @@ func main() {
 	//constant()
 	//array()
 	//mapex()
-	struct1()
+	//struct1()
+	//functionex()
+	//interfacemain()
+	loop()
 }
