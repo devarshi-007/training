@@ -1,10 +1,10 @@
 package main
 
-import "main/webService"
+import "main/module1"
 
 func main() {
 	// module 1
-	 module1.Main()
+	module1.Main()
 
 	// module 2
 	// module2.Main()
@@ -13,6 +13,6 @@ func main() {
 	// module3.Main()
 
 	// web project
-	webService.Main()
+	// webService.Main()
 
 }

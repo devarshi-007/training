@@ -8,13 +8,17 @@ const (
 )
 
 func Main() {
+
 	// variable demo
-	variableDemo()
+	// variableDemo()
 
 	// pointer demo
-	pointerDemo()
+	// pointerDemo()
 
 	// constant demo
-	constdemo()
+	// constdemo()
+
+	// Error handling
+	errorHandling()
 
 }
