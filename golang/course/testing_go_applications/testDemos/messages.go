@@ -1,4 +1,4 @@
-package messsages
+package testdemos
 
 import "fmt"
 
