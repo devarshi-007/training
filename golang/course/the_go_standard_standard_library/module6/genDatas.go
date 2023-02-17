@@ -31,4 +31,23 @@ func genDatas() {
 
 	fmt.Println('\n', typea)
 
+	addPerson(typeA{5})
+	addPerson(typeB{500})
+
+}
+
+func addPerson(p any) bool {
+	if reflect.ValueOf(p).Kind() == reflect.Struct {
+		v := reflect.ValueOf(p)
+
+		switch reflect.TypeOf(p).Name() {
+		case "typeA":
+			fmt.Printf("SQL values: %v\n", v.Field(0))
+		case "typeB":
+			fmt.Printf("SQL value: %v\n", v.Field(0))
+		}
+		return true
+	} else {
+		return false
+	}
 }

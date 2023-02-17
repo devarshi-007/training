@@ -7,6 +7,9 @@ func Main() {
 
 	// interfaceOpr()
 
-	genDatas()
+	// genDatas()
+
+	createType()
+
 	fmt.Println("\nend of the module6")
 }
