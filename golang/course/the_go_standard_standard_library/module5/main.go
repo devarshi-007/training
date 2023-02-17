@@ -4,13 +4,13 @@ import "fmt"
 
 func Main() {
 
-	// stringOpr()
+	stringOpr()
 
 	// stringSplit()
 
 	// findAndReplace()
 
-	findAndReplaceWithRe()
+	// findAndReplaceWithRe()
 
-	fmt.Println("\nend of the module4")
+	fmt.Println("\nend of the module5")
 }

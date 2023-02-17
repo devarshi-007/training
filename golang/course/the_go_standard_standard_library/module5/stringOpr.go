@@ -2,6 +2,7 @@ package module5
 
 import (
 	"fmt"
+	"regexp"
 	"strings"
 )
 
@@ -35,5 +36,17 @@ func stringOpr() {
 	println("\n", strings.Index(str1, "is"))
 
 	println(strings.Join(strings.Split(str1, " "), " + "))
+
+	str4 := `
+	this is something
+	hello
+		remove extras
+	`
+
+	fmt.Printf("%T \n%s \n%s", str4, strings.TrimSpace(str4), strings.TrimSuffix(str4, "remove extras"))
+
+	reg, _ := regexp.Compile(`([ \r\n\t\s])+`)
+
+	fmt.Println(reg.ReplaceAllString(str4, " "))
 
 }
