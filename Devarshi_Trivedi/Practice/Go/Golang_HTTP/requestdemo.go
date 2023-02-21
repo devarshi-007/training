@@ -149,9 +149,8 @@ func middlewareHandler(handler http.Handler) http.Handler {
 }
 
 func main() {
-	productListenHandler := http.HandleFunc(productsHandler)
-	productItemHandler := http.HandleFunc(productHandler)
-
+	productListenHandler := http.HandlerFunc(productsHandler)
+	productItemHandler := http.HandlerFunc(productHandler)
 	http.Handle("/products", middlewareHandler(productListenHandler))
 	http.Handle("/products/", middlewareHandler(productItemHandler))
 	http.ListenAndServe(":5000", nil)
