@@ -153,5 +153,5 @@ func main() {
 	productItemHandler := http.HandlerFunc(productHandler)
 	http.Handle("/products", middlewareHandler(productListenHandler))
 	http.Handle("/products/", middlewareHandler(productItemHandler))
-	http.ListenAndServe(":5000", nil)
+	http.ListenAndServe(":5100", nil)
 }
