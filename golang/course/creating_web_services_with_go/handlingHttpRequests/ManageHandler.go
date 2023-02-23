@@ -8,16 +8,16 @@ import (
 
 // models
 type Product struct {
-	Id   int 
+	Id   int
 	Name string `json:"product_name"`
 }
 
 var productList []Product = []Product{
-	{1, "product 1"},
-	{2, "product 2"},
-	{3, "product 3"},
-	{4, "product 4"},
-	{5, "product 5"},
+	// {1, "product 1"},
+	// {2, "product 2"},
+	// {3, "product 3"},
+	// {4, "product 4"},
+	// {5, "product 5"},
 }
 
 func ManageHandler() {

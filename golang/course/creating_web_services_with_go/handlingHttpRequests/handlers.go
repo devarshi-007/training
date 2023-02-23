@@ -2,7 +2,6 @@ package handlinghttprequests
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 	"strconv"
@@ -19,6 +18,9 @@ func (f *Product) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 // productHandler for /Products
 func newtId() int {
 	lent := len(productList)
+	if lent == 0 {
+		return 1
+	}
 	lastOne := productList[lent-1].Id
 	return lastOne + 1
 }
@@ -87,16 +89,21 @@ func getProductHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(productInJson)
+	case http.MethodDelete:
+		if len(productList)-1 == productListIndex {
+			productList = productList[:productListIndex]
+		} else {
+			productList = append(productList[:productListIndex], productList[productListIndex+1:]...)
+		}
+		w.WriteHeader(http.StatusAccepted)
 	case http.MethodPut:
 		var updatedProduct Product
 		bodyBytes, err := io.ReadAll(r.Body)
-		fmt.Println(string(bodyBytes))
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			return
 		}
 		err = json.Unmarshal(bodyBytes, &updatedProduct)
-		fmt.Println(updatedProduct.Id, productId)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			return
