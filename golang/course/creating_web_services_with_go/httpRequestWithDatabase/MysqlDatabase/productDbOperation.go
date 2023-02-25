@@ -1,7 +1,9 @@
 package database
 
 import (
+	"context"
 	"database/sql"
+	"time"
 )
 
 const (
@@ -13,7 +15,9 @@ const (
 )
 
 func GetProduct(productId int) (*Product, error) {
-	row := DbConn.QueryRow(queryForGetProductById, productId)
+	ctx, cancle := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancle()
+	row := DbConn.QueryRowContext(ctx, queryForGetProductById, productId)
 	product := &Product{}
 	err := row.Scan(&product.Id, &product.Name)
 	if err == sql.ErrNoRows {
@@ -25,7 +29,9 @@ func GetProduct(productId int) (*Product, error) {
 }
 
 func GetProductList() ([]Product, error) {
-	results, err := DbConn.Query(queryForGetAllProducts)
+	ctx, cancle := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancle()
+	results, err := DbConn.QueryContext(ctx, queryForGetAllProducts)
 
 	if err != nil {
 		return nil, err
@@ -44,7 +50,9 @@ func GetProductList() ([]Product, error) {
 }
 
 func InsertProduct(product Product) (int, error) {
-	result, err := DbConn.Exec(queryForInsertProduct, product.Name)
+	ctx, cancle := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancle()
+	result, err := DbConn.ExecContext(ctx, queryForInsertProduct, product.Name)
 
 	if err != nil {
 		return 0, nil
@@ -59,7 +67,9 @@ func InsertProduct(product Product) (int, error) {
 }
 
 func UpdatedProduct(product Product) error {
-	_, err := DbConn.Exec(queryForUpdateProduct, product.Name, product.Id)
+	ctx, cancle := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancle()
+	_, err := DbConn.ExecContext(ctx, queryForUpdateProduct, product.Name, product.Id)
 
 	if err != nil {
 		return err
@@ -69,7 +79,9 @@ func UpdatedProduct(product Product) error {
 }
 
 func RemoveProduct(productID int) error {
-	_, err := DbConn.Query(queryForDeleteProduct, productID)
+	ctx, cancle := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancle()
+	_, err := DbConn.QueryContext(ctx, queryForDeleteProduct, productID)
 
 	if err != nil {
 		return err
