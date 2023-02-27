@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	httpRequestWithDatabase "main/httpRequestWithDatabase"
+	filehandling "main/fileHandling"
 )
 
 func main() {
@@ -12,5 +12,7 @@ func main() {
 
 	// handlinghttprequestwebservices.ManageHandler()
 
-	httpRequestWithDatabase.ManageHandler()
+	// httpRequestWithDatabase.ManageHandler()
+
+	filehandling.HandleRoute("/mid")
 }

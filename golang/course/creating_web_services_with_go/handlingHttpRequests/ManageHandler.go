@@ -35,7 +35,7 @@ func StartListening() {
 func RequestRouteRequest() {
 
 	titlesHandler := http.HandlerFunc(getHeaderTitle)
-	http.Handle("/Title/", middelwareHandler(titlesHandler))
+	http.Handle("/Title/", MiddelwareHandler(titlesHandler))
 
 	http.HandleFunc("/Products", productHandler)
 	/* http.HandleFunc("/Title/", getHeaderTitle) */
@@ -46,7 +46,7 @@ func RequestRouteRequest() {
 
 // middelware
 
-func middelwareHandler(handler http.Handler) http.Handler {
+func MiddelwareHandler(handler http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("-> before handler; middleware start")
 		start := time.Now()
