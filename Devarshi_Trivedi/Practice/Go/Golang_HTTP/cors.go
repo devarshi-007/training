@@ -1,3 +1,2 @@
-//cross- origin resource sharing
-
+// cross- origin resource sharing
 package main
