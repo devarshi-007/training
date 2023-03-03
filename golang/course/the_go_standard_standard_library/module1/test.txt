@@ -1,0 +1,4 @@
+total 8
+-rw-r--r-- 1 jay.ponda jay.ponda  21 Feb 13 12:38 go.mod
+-rw-r--r-- 1 jay.ponda jay.ponda 132 Feb 13 12:45 main.go
+drwxr-xr-x 1 jay.ponda jay.ponda 156 Feb 14 10:54 module1
