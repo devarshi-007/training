@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	socketdemo "main/socketDemo"
+	templatedemo "main/templateDemo"
 )
 
 func main() {
@@ -16,6 +16,8 @@ func main() {
 
 	// filehandling.HandleRoute("/mid")
 
-	socketdemo.StartListening()
+	// socketdemo.StartListening()
+
+	templatedemo.StartListening()
 
 }
