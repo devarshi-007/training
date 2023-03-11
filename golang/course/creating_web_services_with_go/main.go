@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	filehandling "main/fileHandling"
+	socketdemo "main/socketDemo"
 )
 
 func main() {
@@ -14,5 +14,8 @@ func main() {
 
 	// httpRequestWithDatabase.ManageHandler()
 
-	filehandling.HandleRoute("/mid")
+	// filehandling.HandleRoute("/mid")
+
+	socketdemo.StartListening()
+
 }
