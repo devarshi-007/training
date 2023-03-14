@@ -1,0 +1,23 @@
+[
+    {
+        "Id":0,    
+        "Name":"Devar",     
+        "Age":20,
+        "BirthDate":"06-06-2002", 
+        "Male":"true"      
+    },
+    {
+        "Id":1,    
+        "Name":"Devar1",     
+        "Age":20,
+        "BirthDate":"06-06-2002", 
+        "Male":"true"
+    },
+    {
+        "Id":2,    
+        "Name":"Devar2",     
+        "Age":20,
+        "BirthDate":"06-06-2002", 
+        "Male":"true"
+    }
+]

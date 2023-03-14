@@ -1,0 +1,7 @@
+1. for sql import the package
+
+     go get -u github.com/go-sql-driver/mysql
+
+2. Create the database connection in main.go
+
+    db,err := sql.open("mysql","<user>:<password>@tcp(127.0.0.1:3306)/<db-name>")
