@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	templatedemo "main/templateDemo"
+	httpasclient "main/httpAsClient"
 )
 
 func main() {
@@ -18,6 +18,8 @@ func main() {
 
 	// socketdemo.StartListening()
 
-	templatedemo.StartListening()
+	// templatedemo.StartListening()
+
+	httpasclient.RequestTo()
 
 }
