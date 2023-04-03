@@ -1,0 +1,766 @@
+Snippets M8
+-----------
+
+Using the icon:
+<div class="col-auto align-self-end">
+	<i class="bi bi-info-circle text-primary" role="img" aria-label="Info"
+		style="font-size: 1.5rem;"></i>
+</div>
+
+
+Script:
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+<script>
+	document.querySelectorAll('[data-bs-toggle="popover"]')
+		.forEach(function (popover) {
+			new bootstrap.Popover(popover)
+		})
+</script>
+
+
+Jumbtotron custom CSS:
+/* Jumbotron */
+
+.jumbotron-cheese-cakes {
+  background: url('../images/products/cheesecake.jpg') no-repeat fixed;
+}
+
+.jumbotron-all-pies {
+  background: url('../images/carousel2.jpg') no-repeat fixed;
+}
+
+.jumbotron-fruit-pies {
+  background: url('../images/products/strawberrypie.jpg') no-repeat fixed;
+}
+
+.jumbotron-seasonal-pies {
+  background: url('../images/products/cranberrypie.jpg') no-repeat fixed;
+}
+
+.jumbotron-other {
+  background: url('../images/carousel3.jpg') no-repeat fixed;
+}
+
+.jumbotron-detail-apple-pie {
+  background: url('../images/products/applepie.jpg') no-repeat fixed;
+}
+
+.jumbotron {
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.1);
+  height: 40vh;
+  background-size: cover;
+}
+
+
+
+AllPies.html:
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bethany's Pie Shop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap-override.css" rel="stylesheet">
+
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary"
+            aria-label="Bethany's Pie Shop navigation header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top"
+                        alt="Bethany's Pie Shop Logo">
+                    Bethany's Pie Shop
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="nav-dropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pies
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+                                <li><a class="dropdown-item" href="fruitpies.html">Fruit Pies</a></li>
+                                <li><a class="dropdown-item" href="cheesecakes.html">Cheese cakes</a></li>
+                                <li><a class="dropdown-item" href="seasonalpies.html">Seasonal Pies</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="allpies.html">All pies</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="piesubscription.html">Pie subscription</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <input class="form-control" type="text" placeholder="Search pies" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="container-fluid jumbotron jumbotron-all-pies py-5">
+            <div class="container">
+                <h1 class="display-3 fw-bold text-white">Our delicious pies.</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';" class="my-3 ms-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pies</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All pies</li>
+                </ol>
+            </nav>
+
+           
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+Card contents:
+<div class="row" >
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card p-3">
+                        <figure class="p-3 mb-0">
+                            <blockquote class="blockquote">
+                                <p>All of our pies are created with natural ingredients.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0 text-muted">
+                                Bethany
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/applepiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple pie</h5>
+                            <p class="card-text">Our famous apple pies!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/blueberrycheesecakesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Blueberry cheese cake</h5>
+                            <p class="card-text">You'll love it! </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/cheesecakesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese cake</h5>
+                            <p class="card-text"> Plain cheese cake. Plain pleasure.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card bg-primary text-white text-center p-3">
+                        <figure class="mb-0">
+                            <blockquote class="blockquote">
+                                <p>Bethany's Pie Shop bakes the most delicious pies you have ever tasted.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0 text-white">
+                                Laura Peach in <cite title="Source Title">The Pie Observer</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/cherrypiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Cherry pie</h5>
+                            <p class="card-text">A summer classic!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/christmasapplepiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Christmas apple pie</h5>
+                            <p class="card-text">Happy holidays with this pie! </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/cranberrypiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Cranberry pie</h5>
+                            <p class="card-text">A Christmas favorite </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/peachpiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Peach pie</h5>
+                            <p class="card-text">Sweet as peach</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img src="images/carousel1.jpg">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/pumpkinpiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Pumpkin pie</h5>
+                            <p class="card-text">Our Halloween favorite </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/rhubarbpiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Rhubarb pie</h5>
+                            <p class="card-text">My God, so sweet!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card p-3 text-end">
+                        <figure class="mb-0">
+                            <blockquote class="blockquote">
+                                <p>You NEED to taste these. Trust me.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0 text-muted">
+                                Jack Baker in <cite title="Source Title">The Daily Pie</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/strawberrycheesecakesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Strawberry cheese cake</h5>
+                            <p class="card-text">You'll love it! </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/products/strawberrypiesmall.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Strawberry pie</h5>
+                            <p class="card-text">Our delicious strawberry pie!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="applepie.html" class="btn btn-primary">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			
+
+Fruitpies.html:
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bethany's Pie Shop</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/bootstrap-override.css" rel="stylesheet">
+
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary"
+            aria-label="Bethany's Pie Shop navigation header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top"
+                        alt="Bethany's Pie Shop Logo">
+                    Bethany's Pie Shop
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="nav-dropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Pies
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+                                <li><a class="dropdown-item" href="fruitpies.html">Fruit Pies</a></li>
+                                <li><a class="dropdown-item" href="cheesecakes.html">Cheese cakes</a></li>
+                                <li><a class="dropdown-item" href="seasonalpies.html">Seasonal Pies</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="allpies.html">All pies</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="piesubscription.html">Pie subscription</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form>
+                        <input class="form-control" type="text" placeholder="Search pies" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="container-fluid jumbotron jumbotron-all-pies py-5">
+            <div class="container">
+                <h1 class="display-3 fw-bold text-white">Our delicious pies.</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';" class="my-3 ms-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pies</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">All pies</li>
+                </ol>
+            </nav>
+
+           
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+Accordion:
+<div class="accordion" id="fruitPiesAccordion">
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="headingOne">
+			<button class="accordion-button" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				Taste the summer
+			</button>
+		</h2>
+		<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+			data-bs-parent="#fruitPiesAccordion">
+			<div class="accordion-body">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/cherrypiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Cherry pie</h5>
+								<p class="card-text">A summer classic!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/peachpiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Peach pie</h5>
+								<p class="card-text">Sweet as peach</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/strawberrypiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Strawberry pie</h5>
+								<p class="card-text">Our delicious strawberry pie!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="headingTwo">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				Pies to warm you during the cold days
+			</button>
+		</h2>
+		<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+			data-bs-parent="#fruitPiesAccordion">
+			<div class="accordion-body">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/applepiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Apple pie</h5>
+								<p class="card-text">Our famous apple pies!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/rhubarbpiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Rhubarb pie</h5>
+								<p class="card-text">My God, so sweet!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accordion-item">
+		<h2 class="accordion-header" id="headingThree">
+			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				All fruit pies
+			</button>
+		</h2>
+		<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+			data-bs-parent="#fruitPiesAccordion">
+			<div class="accordion-body">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/applepiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Apple pie</h5>
+								<p class="card-text">Our famous apple pies!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/cherrypiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Cherry pie</h5>
+								<p class="card-text">A summer classic!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/peachpiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Peach pie</h5>
+								<p class="card-text">Sweet as peach</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/rhubarbpiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Rhubarb pie</h5>
+								<p class="card-text">My God, so sweet!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card rounded mb-4 shadow-sm">
+							<img class="card-img-top" src="images/products/strawberrypiesmall.jpg">
+							<div class="card-body">
+								<h5 class="card-title">Strawberry pie</h5>
+								<p class="card-text">Our delicious strawberry pie!</p>
+							</div>
+							<div class="card-footer">
+								<a href="applepie.html" class="btn btn-primary">View details</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+Color overrides:
+.bg-primary {
+    background-color: #a593c2 !important;
+}
+
+.btn-primary {
+    background-color: #a593c2;
+    border-color: #a593c2;
+  }
+  
+  .btn-primary:hover {
+    background-color: #876bb4;
+    border-color: #876bb4;
+  }
+  
+  .btn-primary:focus, .btn-primary.focus {
+    background-color: #876bb4;
+    border-color: #876bb4;
+    box-shadow: 0 0 0 0.2rem rgba(165, 147, 194, 0.5);
+  }
+  
+  .btn-primary.disabled, .btn-primary:disabled {
+    background-color: #a593c2;
+    border-color: #a593c2;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    background-color: #876bb4;
+    border-color: #876bb4;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(165, 147, 194, 0.5);
+  }
+
+  .btn-outline-primary {
+    color: #a593c2;
+    border-color: #a593c2;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #a593c2;
+    border-color: #a593c2;
+  }
+  
+  .btn-outline-primary:focus, .btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(165, 147, 194, 0.5);
+  }
+  
+  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: #a593c2;
+  }
+  
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle {
+    background-color: #a593c2;
+    border-color: #a593c2;
+  }
+  
+  .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(165, 147, 194, 0.5);
+  }
+
+  .btn-success {
+    background-color: #23cfa7;
+    border-color: #23cfa7;
+  }
+  
+  .btn-success:hover {
+    background-color: #19ae8b;
+    border-color: #19ae8b;
+  }
+  
+  .btn-success:focus, .btn-success.focus {
+    background-color: #19ae8b;
+    border-color: #19ae8b;
+    box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+  }
+  
+  .btn-success.disabled, .btn-success:disabled {
+    background-color: #23cfa7;
+    border-color: #23cfa7;
+  }
+  
+  .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
+  .show > .btn-success.dropdown-toggle {
+    background-color: #19ae8b;
+    border-color: #1c7430;
+  }
+  
+  .text-primary {
+    color: #a593c2 !important;
+  }
+  
+  a.text-primary:hover, a.text-primary:focus {
+    color: #9071c2 !important;
+  }
+  
+  .text-secondary {
+    color: #6c757d !important;
+  }
+  
+  a.text-secondary:hover, a.text-secondary:focus {
+    color: #494f54 !important;
+  }
+
+  .text-success {
+    color: #23cfa7 !important;
+  }
+  
+  a.text-success:hover, a.text-success:focus {
+    color: #19692c !important;
+  }
+  
+
+  .border-primary {
+    border-color: #a593c2 !important;
+  }
+
+  .breadcrumb  a {
+    color: #876bb4;
+  }
+
+.accordion-button:not(.collapsed) {
+  color: #876bb4;
+  background-color: #d8c1ff;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #a593c2;
+}
+
+.form-check-input:checked {
+  border-color: #a593c2;
+  background-color: #a593c2;
+}

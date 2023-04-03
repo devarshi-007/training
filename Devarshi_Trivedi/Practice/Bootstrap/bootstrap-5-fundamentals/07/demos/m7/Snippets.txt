@@ -1,0 +1,548 @@
+Snippets M7
+-----------
+
+Bootstrap JS file reference:
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+	
+	
+Carousel:
+<div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-indicators">
+		<button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="0" class="active"
+			aria-current="true" aria-label="Welcome 1"></button>
+		<button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="1"
+			aria-label="Welcome 2"></button>
+		<button type="button" data-bs-target="#welcomeCarousel" data-bs-slide-to="2"
+			aria-label="Welcome 3"></button>
+	</div>
+	<div class="carousel-inner">
+		<div class="carousel-item welcome-carousel-image1 active">
+			<div class="carousel-caption">
+				<h1>Welcome to Bethany's Pie Shop</h1>
+				<p>Home to the best pies on the internet.</p>
+			</div>
+		</div>
+		<div class="carousel-item welcome-carousel-image2">
+			<div class="carousel-caption text-start">
+				<h1>Discover our pie subscription</h1>
+				<p>Our delicious pies delivered to your door. Every week.</p>
+				<p><a class="btn btn-lg btn-primary" href="piesubscription.html" role="button">Sign up
+						today</a></p>
+			</div>
+		</div>
+		<div class="carousel-item welcome-carousel-image3">
+			<div class="carousel-caption text-end">
+				<h1>Browse the pies of summer.</h1>
+				<p>Every season has its pies. Enjoy our summer fruit pies now.</p>
+				<p><a class="btn btn-lg btn-primary" href="fruitpies.html" role="button">Fruit pies</a></p>
+			</div>
+		</div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+
+CSS customization:
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 40rem;
+    max-width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+ 
+  .welcome-carousel-image1{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../images/carousel1.jpg');
+  }
+
+  .welcome-carousel-image2{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../images/carousel2.jpg');
+  }
+
+  .welcome-carousel-image3{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.3);
+    background-image:url('../images/carousel3.jpg');
+  }
+  
+  
+Offcanvas:
+<div class="offcanvas offcanvas-start " data-bs-scroll="true" tabindex="-1"
+	id="shoppingCart" aria-labelledby="shoppingCartLabel">
+	
+</div>
+
+
+Offcanvas header:
+<div class="offcanvas-header">
+	<h5 class="offcanvas-title" id="shoppingCartLabel">Your shopping cart</h5>
+	<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+		aria-label="Close"></button>
+</div>
+
+
+Offcanvas contents:
+<div class="offcanvas-body">
+	<div class="table-responsive">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Pie name</th>
+					<th>Quantity</th>
+					<th class="text-center">Price</th>
+					<th class="text-center">Total</th>
+					<th> </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="col-sm-8 col-md-6">
+						<div class="media">
+							<img class="mr-3 thumbnail img-fluid" width="75"
+								src="images/products/pumpkinpiesmall.jpg" alt="pumpkin pie">
+							<div class="media-body">
+								<h5 class="mt-0 media-heading text-primary">Pumpkin pie</h5>
+								<span>Status: </span><span class="text-success"><strong>In
+										Stock</strong></span>
+							</div>
+						</div>
+					</td>
+					<td class="col-sm-1 col-md-1" style="text-align: center">
+						<input type="number" class="form-control" value="2">
+					</td>
+					<td class="col-sm-1 col-md-1 text-center"><strong>$14.95</strong></td>
+					<td class="col-sm-1 col-md-1 text-center"><strong>$29.90</strong></td>
+					<td class="col-sm-1 col-md-1">
+						<button type="button" class="btn btn-danger">
+							X
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td class="col-sm-8 col-md-6">
+						<div class="media">
+							<img class="mr-3 thumbnail" width="75" src="images/products/applepiesmall.jpg"
+								alt="apple pie">
+							<div class="media-body">
+								<h5 class="mt-0 media-heading text-primary">Apple pie</h5>
+								<span>Status: </span><span class="text-warning"><strong>Last
+										items</strong></span>
+							</div>
+						</div>
+					</td>
+					<td class="col-sm-1 col-md-1" style="text-align: center">
+						<input type="number" class="form-control" value="1">
+					</td>
+					<td class="col-sm-1 col-md-1 text-center"><strong>$14.95</strong></td>
+					<td class="col-sm-1 col-md-1 text-center"><strong>$14.95</strong></td>
+					<td class="col-sm-1 col-md-1">
+						<button type="button" class="btn btn-danger">
+							X
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="text-right">
+						<h5>Subtotal</h5>
+					</td>
+					<td class="text-center">
+						<h5><strong>$44.85</strong></h5>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="3" class="text-right">
+						<h5>Shipping</h5>
+					</td>
+					<td class="text-center">
+						<h5><strong>$10.00</strong></h5>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="3" class="text-right">
+						<h3>Total</h3>
+					</td>
+					<td class="text-center">
+						<h3><strong>$54.85</strong></h3>
+					</td>
+					<td></td>
+
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<form class="m-1">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Promo code">
+			<div class="input-group-append">
+				<button type="button" class="btn btn-secondary">Redeem</button>
+			</div>
+		</div>
+	</form>
+	<a type="button" href="order.html" class="m-1 btn btn-success">
+		Go to order page
+	</a>
+
+	<a type="button" href="" class="m-1 btn btn-danger" >
+		Clear your shopping cart
+	</a>
+
+	</div>
+	
+	
+Contact.html:
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bethany's Pie Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top"
+                        alt="Bethany's Pie Shop Logo">
+                    Bethany's Pie Shop
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="seasonalpies.html">Pies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+						
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main role="main">
+        <div class="container">
+          
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';" class="my-3 ms-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+            
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+Contact form:
+<form method="post">
+	<div class="text-center">
+		<h3>Contact us</h3>
+		<h4 class="text-muted">We would love to hear from you!</h4>
+	</div>
+
+	<div class="row mt-3">
+		<div class="col-md-6">
+			<div class="mb-2">
+				<input type="text" class="form-control" placeholder="Your Name *" aria-label="name" />
+			</div>
+			<div class="mb-2">
+				<input type="text" class="form-control" placeholder="Your Email *" aria-label="email" />
+			</div>
+			<div class="mb-2">
+				<input type="text" class="form-control" placeholder="Your Phone Number *"
+					aria-label="phone" />
+			</div>
+			<div class="mb-2">
+				<button type="button" class="btn btn-primary" id="sendMessage">Send Message</button>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div>
+				<textarea class="form-control" placeholder="Your Message *" rows="5"></textarea>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+Toast message:
+<div id="sendMessage" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+	<div class="toast-header">
+		<strong class="me-auto">Bethany</strong>
+		<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+	</div>
+	<div class="toast-body">
+		We successfully received your message. We will get in touch soon!
+	</div>
+</div>
+
+
+SendMessage button script:
+<script>
+        document.getElementById("sendMessage").onclick = function () {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function (toastEl) {
+                // Creates an array of toasts (it only initializes them)
+                return new bootstrap.Toast(toastEl) // No need for options; use the default options
+            });
+            toastList.forEach(toast => toast.show()); // This show them
+        };
+    </script>
+	
+	
+
+Updated menu:
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
+	<div class="container">
+		<a class="navbar-brand" href="index.html">
+			<img src="images/pie.png" width="30" height="30" class="d-inline-block align-top"
+				alt="Bethany's Pie Shop Logo">
+			Bethany's Pie Shop
+		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+			aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="nav navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="nav-dropdown" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Pies
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+						<li><a class="dropdown-item" href="fruitpies.html">Fruit Pies</a></li>
+						<li><a class="dropdown-item" href="cheesecakes.html">Cheese cakes</a></li>
+						<li><a class="dropdown-item" href="seasonalpies.html">Seasonal Pies</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="allpies.html">All pies</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="order.html">Order</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+PieSubscription.html:
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bethany's Pie Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/pie.png" width="30" height="30" class="d-inline-block align-top"
+                        alt="Bethany's Pie Shop Logo">
+                    Bethany's Pie Shop
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-dropdown" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pies
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+                                <li><a class="dropdown-item" href="fruitpies.html">Fruit Pies</a></li>
+                                <li><a class="dropdown-item" href="cheesecakes.html">Cheese cakes</a></li>
+                                <li><a class="dropdown-item" href="seasonalpies.html">Seasonal Pies</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="allpies.html">All pies</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="order.html">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="piesubscription.html">
+                                Pie subscription
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main role="main">
+        <div class="container">
+            <nav class="my-3 ms-3" style="--bs-breadcrumb-divider: '>';">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="#">Pie subscription</a></li>
+                </ol>
+            </nav>
+
+            <div class="row p-3 pb-md-4 mx-auto text-start">
+                <div class="col-md-8">
+                    <h1 class="promo-heading fw-normal">Now you get our pies with our subscription. <span
+                            class="text-muted">Unlimited pie.</span></h1>
+                    <a class="btn btn-sm btn-primary mt-2" data-bs-toggle="collapse" data-bs-target="#subscriptionInformation"
+                        role="button" aria-expanded="false" aria-controls="subscriptionInformation">More information</a>
+                    <div class="collapse" id="subscriptionInformation">
+                        <p class="lead">Marzipan toffee jelly beans lollipop donut. Brownie dessert apple pie pudding
+                            gummies tootsie roll tiramisu wafer. Brownie gingerbread chocolate cake chocolate bar
+                            brownie.
+                            Cake dragée jelly beans pastry donut apple pie.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/bethanysquare.jpg" class="img-fluid" alt="Responsive image">
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Monthly</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$50<small
+                                    class="text-muted fw-light">/month</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>2 pies included</li>
+                                <li>Invite to our factory</li>
+                                <li>Meet and greet with Bethany</li>
+                                <li>Premier support for all pies</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Subscribe now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Weekly</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$100<small
+                                    class="text-muted fw-light">/month</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>4 pies included</li>
+                                <li>Invite to our factory</li>
+                                <li>Meet and greet with Bethany</li>
+                                <li>Premier support for all pies</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Subscribe now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-white bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">For the family</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$150<small
+                                    class="text-muted fw-light">/month</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>6 pies included</li>
+                                <li>Invite to our factory</li>
+                                <li>Meet and greet with Bethany</li>
+                                <li>Premier support for all pies</li>
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary">Subscribe now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

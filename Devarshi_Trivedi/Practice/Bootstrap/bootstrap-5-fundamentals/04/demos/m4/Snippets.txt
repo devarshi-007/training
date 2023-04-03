@@ -1,0 +1,43 @@
+Snippets M4
+-----------
+
+Table: 
+
+<div class="row">
+	<table>
+		<thead>
+			<tr>
+				<th>Ingredient</th>
+				<th>Risk</th>
+				<th>Percentage</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Apple</td>
+				<td>Yes</td>
+				<td>50%</td>
+			</tr>
+			<tr>
+				<td>Eggs</td>
+				<td>Yes</td>
+				<td>10%</td>
+			</tr>
+			<tr>
+				<td>Nuts</td>
+				<td>Maybe</td>
+				<td>&lt;0.1%</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+Bethany's quote:
+<div class="p-4 mb-3 mt-2 bg-light rounded border border-primary">
+	<h4>A quote from Bethany</h4>
+	<p class="mb-0 fst-italic">My recipes have been in our family for generations. We hope you enjoy our
+		pies! -
+		Bethany
+	</p>
+</div>
