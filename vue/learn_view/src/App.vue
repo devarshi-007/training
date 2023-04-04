@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, onMounted, watch, onUpdated } from 'vue'
 
 let id = 0;
 const titleClass = ref('my title')
@@ -13,11 +13,11 @@ const todos = ref([
   { id: id++, text: 'Learn Vue', done: false }
 ])
 const filteredTodos = computed(() => {
-  return showAll ? todos.value :
+  return showAll.value ? todos.value :
     todos.value.filter((val) => !val.done)
 })
 
-console.log(filteredTodos)
+
 // const s = setTimeout(() => {
 //   titleClass.value = 'new title';
 //   clearTimeout(s)
@@ -38,7 +38,6 @@ function changeCase() {
     titleClass.value = str.join(' ');
     toggleState.count = 0;
   }
-  toggle.value = smile()
 }
 
 function onInput(e) {
@@ -62,9 +61,25 @@ function removeTodo(todo) {
 
 function done(todo) {
   todo.done = !todo.done
-  console.log(todos.value, filteredTodos.value, showAll.value)
 }
 
+const mountIt = ref(null)
+onMounted(() => {
+  alert(`new value: "${mountIt.value.checked ? 'show all' : 'remaining'}" updated!`)
+})
+
+
+watch(todos, () => {
+  let completed = 0
+
+  todos.value.forEach((elm) => {
+    if (elm.done) completed++;
+  })
+
+  if (completed >= 0) {
+    alert(`you complated ${completed} todos`)
+  }
+}, { deep: true })
 
 </script>
 
@@ -80,7 +95,7 @@ function done(todo) {
     <h1 v-else>Oh no 😶</h1>
 
     <label>
-      <input type="checkbox" v-model="showAll" />
+      <input type="checkbox" v-model="showAll" ref="mountIt" />
       <span :class="{ done: showAll, remaining: !showAll }" class="dynamicId">{{ showAll ? "show all" : "show remaining"
       }}</span>
     </label>
