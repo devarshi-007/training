@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, computed, onMounted, watch, onUpdated } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 import TodoComp from './components/Todo.vue';
 
 const titleClass = ref('my title')
@@ -40,6 +40,17 @@ onMounted(() => {
   alert(`new value: "${mountIt.value.textContent ? 'show all' : 'remaining'}" mounted!`)
 })
 
+const strtingId = ref(5)
+const randomSmile = () => {
+  let arr = ['😀', '😃', '😆', '😆', '😊', '😋', '😛', '🤣', '😂', '🤗']
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+const confirmId = ref(0)
+const emitFunc = ref(() => { })
+const callEmitFunc = () => {
+  console.log(emitFunc.value(), "**********", typeof emitFunc, typeof emitFunc.value, emitFunc.value)
+}
+
 </script>
 
 <template>
@@ -47,13 +58,16 @@ onMounted(() => {
     <input type="text" @input="onInput">
     <button @click="changeCase" class="dynamicId">change case</button>
     <button @click="todoOpr.addNew(titleClass)" class="dynamicId">Add todo</button>
-    <h1 ref="mountIt">{{ titleClass.valueOf() }}</h1>
-    <!-- <div v-bind:id="dynamicId"></div> -->
+    <h1 :title="titleClass" ref="mountIt">{{ titleClass.valueOf() }}</h1>
 
     <h1 v-if="smile()">Vue is awesome! 😀</h1>
     <h1 v-else>Oh no 😶</h1>
 
-    <TodoComp ref="todoOpr" />
+    <p>{{ confirmId }}</p>
+    <TodoComp ref="todoOpr" :id="strtingId" :randomSmile="randomSmile" @newID="(desidedID) => confirmId = desidedID"
+      @getNumber="(func) => emitFunc = func">* {{ emitFunc() }} *</TodoComp>
+
+    <button @click="callEmitFunc()" class="dynamicId">emit function call</button>
   </main>
 </template>
 

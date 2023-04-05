@@ -1,7 +1,17 @@
 <script setup>
-import { ref, reactive, computed, onMounted, watch, onUpdated } from 'vue'
+import { ref, computed, watch } from 'vue'
 
-let id = 0;
+const props = defineProps({
+  id: Number,
+  randomSmile: Function
+})
+const emit = defineEmits(
+  ['newID', 'getNumber']
+)
+
+let id = props.id ? props.id : 0;
+emit('newID', id)
+emit('getNumber', () => Math.ceil(Math.random() * 10))
 
 const showAll = ref(true)
 const todos = ref([
@@ -14,10 +24,6 @@ const filteredTodos = computed(() => {
   return showAll.value ? todos.value :
     todos.value.filter((val) => !val.done)
 })
-
-function toggleShowAll() {
-  showAll.value = !showAll.value
-}
 
 function addNew(text) {
   todos.value.push(
@@ -60,11 +66,13 @@ defineExpose({
 
   <ol>
     <li v-for="todo in filteredTodos" :key="todo.id">
+      <span>{{ randomSmile() }}</span>
       <span>id: {{ todo.id }},</span>
       <span :class="{ done: todo.done, remaining: !todo.done }" @click="done(todo)">text: {{ todo.text }},</span>
       <button @click="removeTodo(todo)">X</button>
     </li>
   </ol>
+  <slot>* fallback content *</slot>
 </template>
 
 <style scoped>
