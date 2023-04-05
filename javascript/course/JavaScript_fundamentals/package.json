@@ -1,0 +1,13 @@
+{
+  "name": "learn_js",
+  "version": "1.0.0",
+  "description": "javascript fundamentals",
+  "main": "main.js",
+  "scripts": {
+    "run": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "jay ponda",
+  "license": "ISC"
+}
