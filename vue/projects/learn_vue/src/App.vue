@@ -1,13 +1,38 @@
 <script setup>
+// module import
 import { ref, reactive, onMounted } from 'vue'
+
+// component import
 import TodoComp from './components/Todo.vue';
 
+// states
 const titleClass = ref('my title')
 const todoOpr = ref(null)
 const toggleState = reactive({
   count: 0
 })
 
+// element reference
+const mountIt = ref(null)
+
+// props
+const strtingId = ref(5)
+const randomSmile = () => {
+  let arr = ['😀', '😃', '😆', '😆', '😊', '😋', '😛', '🤣', '😂', '🤗']
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
+// emits
+const confirmId = ref(0)
+const emitFunc = ref(() => { })
+
+// mount
+onMounted(() => {
+  alert(`new value: "${mountIt.value.textContent ? 'show all' : 'remaining'}" mounted!`)
+})
+
+
+// functions
 function changeCase() {
   if (toggleState.count == 0) {
     titleClass.value = titleClass.value.toUpperCase()
@@ -35,18 +60,6 @@ function smile() {
   return Math.round(Math.random() * 10) % 2 == 0
 }
 
-const mountIt = ref(null)
-onMounted(() => {
-  alert(`new value: "${mountIt.value.textContent ? 'show all' : 'remaining'}" mounted!`)
-})
-
-const strtingId = ref(5)
-const randomSmile = () => {
-  let arr = ['😀', '😃', '😆', '😆', '😊', '😋', '😛', '🤣', '😂', '🤗']
-  return arr[Math.floor(Math.random() * arr.length)]
-}
-const confirmId = ref(0)
-const emitFunc = ref(() => { })
 const callEmitFunc = () => {
   console.log(emitFunc.value(), "**********", typeof emitFunc, typeof emitFunc.value, emitFunc.value)
 }
