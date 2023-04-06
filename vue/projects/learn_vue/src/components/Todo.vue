@@ -5,6 +5,7 @@ const props = defineProps({
   id: Number,
   randomSmile: Function
 })
+
 const emit = defineEmits(
   ['newID', 'getNumber']
 )

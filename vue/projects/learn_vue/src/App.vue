@@ -1,6 +1,6 @@
 <script setup>
 // module import
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted, onUpdated, onUnmounted } from 'vue'
 
 // component import
 import TodoComp from './components/Todo.vue';
@@ -27,9 +27,30 @@ const confirmId = ref(0)
 const emitFunc = ref(() => { })
 
 // mount
+// onMounted(() => {
+//   alert(`new value: "${mountIt.value.textContent ? 'show all' : 'remaining'}" mounted!`)
+// })
+const myp = ref(5)
 onMounted(() => {
-  alert(`new value: "${mountIt.value.textContent ? 'show all' : 'remaining'}" mounted!`)
+  console.log(`mounted ${Date.now}`)
 })
+onUpdated(() => {
+  console.log(`updated ${Date.now}`)
+})
+
+onUnmounted(() => {
+  console.log(`unmounted ${Date.now}`)
+})
+
+let g = setInterval(() => {
+  myp.value++;
+}, 1000)
+
+let gg = setTimeout(() => {
+  clearInterval(g)
+  clearTimeout(gg)
+}, 10000)
+
 
 
 // functions
@@ -68,19 +89,23 @@ const callEmitFunc = () => {
 
 <template>
   <main>
-    <input type="text" @input="onInput">
-    <button @click="changeCase" class="dynamicId">change case</button>
-    <button @click="todoOpr.addNew(titleClass)" class="dynamicId">Add todo</button>
-    <h1 :title="titleClass" ref="mountIt">{{ titleClass.valueOf() }}</h1>
 
-    <h1 v-if="smile()">Vue is awesome! 😀</h1>
-    <h1 v-else>Oh no 😶</h1>
+    <p v-if="myp % 2 == 0">{{ myp }}</p>
 
-    <p>{{ confirmId }}</p>
-    <TodoComp ref="todoOpr" :id="strtingId" :randomSmile="randomSmile" @newID="(desidedID) => confirmId = desidedID"
-      @getNumber="(func) => emitFunc = func">* {{ emitFunc() }} *</TodoComp>
+    <!-- <input type="text" @input="onInput">
+                    <button @click="changeCase" class="dynamicId">change case</button>
+                    <button @click="todoOpr.addNew(titleClass)" class="dynamicId">Add todo</button>
+                    <h1 :title="titleClass" ref="mountIt">{{ titleClass.valueOf() }}</h1>
 
-    <button @click="callEmitFunc()" class="dynamicId">emit function call</button>
+                    <h1 v-if="smile()">Vue is awesome! 😀</h1>
+                    <h1 v-else>Oh no 😶</h1>
+
+                    <p>{{ confirmId }}</p>
+                    <TodoComp ref="todoOpr" :id="strtingId" :randomSmile="randomSmile" @newID="(desidedID) => confirmId = desidedID"
+                      @getNumber="(func) => emitFunc = func">* {{ emitFunc() }} *</TodoComp>
+
+                    <button @click="callEmitFunc()" class="dynamicId">emit function call</button>
+                  -->
   </main>
 </template>
 
