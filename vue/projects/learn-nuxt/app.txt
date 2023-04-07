@@ -1,3 +1,14 @@
+<script setup>
+useServerSeoMeta({
+  title: 'My Amazing Site',
+  ogTitle: 'My Amazing Site',
+  description: 'This is my amazing site, let me tell you all about it.',
+  ogDescription: 'This is my amazing site, let me tell you all about it.',
+  ogImage: '../assets/nuxt.png',
+  twitterCard: 'summary_large_image',
+})
+</script>
+
 <template>
   <div>
     <!-- <NuxtWelcome /> -->
@@ -10,3 +21,6 @@
     <!-- <img src="/img/nuxt.png" alt="Discover Nuxt 3" /> -->
   </div>
 </template>
+
+// link: [{ rel: 'icon', type: 'image/ico', href: "/favicon.ico" }]
+<!-- <link rel="shortcut icon" type="image/png" href="~/assets/nuxt.png" /> -->
