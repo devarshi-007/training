@@ -7,7 +7,7 @@ const appConfig = useAppConfig()
 <template>
     <Head>
         <Title>hello</Title>
-        <link rel="shortcut icon" type="image/jpg" href="/img/logo.jpg" />
+        <link rel="shortcut icon" type="image/ico" href="/public/favicon.ico" />
     </Head>
     <Nav> </Nav>
     <div>
