@@ -7,7 +7,7 @@ const appConfig = useAppConfig()
 <template>
     <Head>
         <Title>hello</Title>
-        <link rel="shortcut icon" type="image/png" href="@/assets/nuxt.png" />
+        <Link rel="shortcut icon" type="image/png" href="/img/nuxt.png" />
     </Head>
     <Nav> </Nav>
     <div>

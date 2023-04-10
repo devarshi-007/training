@@ -1,0 +1,39 @@
+<script setup>
+const k = await useFetch("https://date.nager.at/api/v2/publicholidays/2020/US")
+const kDate = k.data
+</script>
+
+<template>
+    <div class="table-responsive-xl">
+        <table class="table table-bordered table-striped table-hover caption-top">
+            <!-- <caption class="p-1">List of users</caption> -->
+            <thead class="table-dark">
+                <tr>
+                    <th> date </th>
+                    <th> localName </th>
+                    <th> name </th>
+                    <th> countryCode </th>
+                    <th> fixed </th>
+                    <th> global </th>
+                    <th> counties</th>
+                    <th> launchYear </th>
+                    <th> type </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="data in kDate">
+
+                    <td style="white-space: nowrap">{{ data.date }}</td>
+                    <td>{{ data.localName }}</td>
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.countryCode }}</td>
+                    <td>{{ data.fixed }}</td>
+                    <td>{{ data.global }}</td>
+                    <td>{{ data.counties }}</td>
+                    <td>{{ data.launchYear }}</td>
+                    <td>{{ data.type }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</template>

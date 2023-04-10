@@ -16,12 +16,14 @@ useHead({
 
 <template>
     <Head>
-        <title>{{ p }}</title>
-        <link rel="shortcut icon" type="image/png" href="public/img/logo.png" />
+        <Title>{{ p }}</Title>
+        <Meta name="description" :content="p" />
+        <Link rel="shortcut icon" type="image/jpg" href="/img/logo.jpg" />
     </Head>
     <section>
         <p>This page will be displayed at the /about route.</p>
         <p>{{ p }}</p>
+        <img src="/img/logo.jpg" />
     </section>
 </template>
   
