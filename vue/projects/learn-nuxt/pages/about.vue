@@ -17,7 +17,7 @@ useHead({
 <template>
     <Head>
         <title>{{ p }}</title>
-        <link rel="shortcut icon" type="image/png" href="/img/nuxt.png" />
+        <link rel="shortcut icon" type="image/png" href="public/img/logo.png" />
     </Head>
     <section>
         <p>This page will be displayed at the /about route.</p>
