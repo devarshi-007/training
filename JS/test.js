@@ -1,7 +1,7 @@
 const loading =  require('loading-cli');
 const load = loading("loading...")
 
-const users=[ "jinal-gajjar","fbfdbgrtbcbvx","nilam-singh","JayPonda","chintansakhiya","Ami-Kalola","aniketgohelimp","Ankit Jilka","Annavar-satish","Bhautik","Bhoomiz01","VatsaL","Rakshit Menpara","dhruvjoshi2000","abcd","Disha-Kothari","JAY PONDA IMPROWISED"];
+const users=[ "jinal-gajjar","nvsnjksngiormhum","nilam-singh","JayPonda","chintansakhiya","Ami-Kalola","aniketgohelimp","Ankit Jilka","Annavar-satish","Bhautik","Bhoomiz01","VatsaL","Rakshit Menpara","dhruvjoshi2000","abcd","Disha-Kothari","JAY PONDA IMPROWISED"];
 
 const detail=[];
 
@@ -13,7 +13,7 @@ async function getData(){
     for(let user of users){
         userDetail =await fetch(`https://api.github.com/users/${user}`,{
         
-    }).then(x => x.json()).then(val=>{
+    }).then(res => res.json()).then(val=>{
         detail.push(val);
         if (val.message=="Not Found"){
             notFound++
