@@ -1,7 +1,0 @@
-layout --> definePageMeta({
-    layout:`name`
-})
-
-
-page->list ->list/
-[id] -> /1,/2
