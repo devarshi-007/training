@@ -1,26 +1,38 @@
-async function getData() {
+const loading =  require('loading-cli');
+const load = loading("loading...")
 
-    fetch('https://api.github.com/users')
-    .then ((response)=>{
-        return response.json();
-    })
-    .then((response)=>{
-       const res = console.log(response)
-       if(!Object.keys(res.data).length){
-        console.log("no data found");
+const users=[ "jinal-gajjar","fbfdbgrtbcbvx","nilam-singh","JayPonda","chintansakhiya","Ami-Kalola","aniketgohelimp","Ankit Jilka","Annavar-satish","Bhautik","Bhoomiz01","VatsaL","Rakshit Menpara","dhruvjoshi2000","abcd","Disha-Kothari","JAY PONDA IMPROWISED"];
+
+const detail=[];
+
+let notFound = 0;
+let found = 0;
+async function getData(){
+    const timeStart=Date.now();
+
+    for(let user of users){
+        userDetail =await fetch(`https://api.github.com/users/${user}`,{
+        
+    }).then(x => x.json()).then(val=>{
+        detail.push(val);
+        if (val.message=="Not Found"){
+            notFound++
+        }
+        else{
+            found++
         }
     });
 }
-//console.log(JSON.stringify(response));
-//console.log(response)
-// console.log(response.status)
-// console.log(response.statusText); 
+    const timeEnd = Date.now();
+    load.stop()
+    const countTime = (timeEnd-timeStart)/1000
+    console.log("timing in (ms):"+countTime)
+    console.log("Total Found:" + found )
+    console.log("Not Found:" + notFound)
+}
 
-// if (response.status === 200) {
-//     let data = response.text();
-// }
-// .then(
-//     console.log(response)
-// )
-// }
-getData();
+function Demo(){
+    load.start()
+    getData()
+}
+Demo()
