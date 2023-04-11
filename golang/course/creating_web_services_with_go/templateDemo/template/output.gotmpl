@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 style="color:red;">{{.BlogPost.Title}}</h2>
+    <p style="color:green;">{{.BlogPost.Content}}</p>
+    <table style="width:100%; border: 1px solid orange">
+      <tr style="text-align: left">
+        <th>No</th>
+        <th>Value</th>
+      </tr>
+      {{range $index, $element := .List }}
+      <tr {{if mod $index 2}} style="color:orange;" {{end}}>
+        <td>{{$index}}</td>
+        <td>{{$element}}</td>
+      </tr>
+      {{end}}
+    </table>
+  </body>
+</html>

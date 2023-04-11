@@ -1,0 +1,9 @@
+// valid
+/* valid */
+/**
+ * valid
+ */
+
+let, var, const = _var, $var, variable;
+
+(num).toFixed(<len>) => string
