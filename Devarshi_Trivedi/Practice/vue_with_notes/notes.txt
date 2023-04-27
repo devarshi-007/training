@@ -1,0 +1,77 @@
+-----------------------------------------------------------
+Vue apps can be build quickly. NO experience needed
+Fast perfomance and small package
+tools you need to build view layer
+
+------not use cost
+-> page slower or payload big  -> user navigate away
+-> DOM updating slow. Vue use virtual DOM. 
+-> fixing is low
+
+-----------------------------------------------------------
+
+Why vue?
+
+1. Vue new or old exisiting -> can use vue
+2. features familier with react and agular
+3. fast, easy and maintain
+4. popular
+5. Devlopers favor vue
+
+who use?
+
+1. Small team
+2. Small Prototypes
+3. Large app collaboration easy
+4. Outside company fix project is good
+
+-----------------------------------------------------------
+What is Vue?
+
+1. JS libraray (BIg block of JS)
+2. A render engine (takes data model and component as i/p and o/p html)
+3. COllaboration tool break application in smaller segment(components)
+
+features
+1. Components
+2. Buit-in Reactivity (magic) (application update automatically when data changes)
+3. load quickly and render fast
+4. many directives for,if,bind
+
+
+FIle type .vue -> can't read
+so build .vue file
+
+-----------------------------------------------------------
+file
+template -> html
+script -> application code (controller for template)
+styles -> styles for component
+
+-----------------------------------------------------------
+Benefits
+
+1. Create prototype quickly
+2. More logic
+3. Simple interoperability
+4. Gentle learning curve
+
+-----------Vue vs others
+prototype immediatly *vs* figure project folder and tooling
+logic,structure,style in one file *vs* logic in controller(js) cssand componetnt in(jsx)
+get start quickly *vs* not quickly learn
+
+---------Drawbacks
+lot of options
+Most community are chinese
+full time paid developer are less
+
+-----------------------------------------------------------
+Which business are benifit?
+
+Freelance
+Smalll collaboration
+Startups
+Business who produce many Prototypes
+
+-----------------------------------------------------------     

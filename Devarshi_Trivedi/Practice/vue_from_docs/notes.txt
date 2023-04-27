@@ -1,0 +1,4 @@
+There are three kinds of route middleware:
+Anonymous (or inline) route middleware, which are defined directly in the pages where they are used.
+Named route middleware, which are placed in the middleware/ directory and will be automatically loaded via asynchronous import when used on a page. (Note: The route middleware name is normalized to kebab-case, so someMiddleware becomes some-middleware.)
+Global route middleware, which are placed in the middleware/ directory (with a .global suffix) and will be automatically run on every route change.

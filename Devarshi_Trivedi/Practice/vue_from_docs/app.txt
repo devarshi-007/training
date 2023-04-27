@@ -1,0 +1,6 @@
+<template>
+  <div>
+    <img src="./public/favicon.ico" />
+    <img src="~/assets/favicon.ico" />
+  </div>
+</template>
