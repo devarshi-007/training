@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body style="background-color: pink; height: 100vh; width: 100%">
+    <div class="container-fluid jumbotron jumbotron-img py-5">
+      <div class="container">
+        <h1 class="display-3 fw-bold text-white">this is a title</h1>
+      </div>
+    </div>
+    <main role="main" class="container">
+      <a href="next.html" target="_blank" rel="noopener noreferrer">go</a>
+      <i
+        class="fa fa-car text-success"
+        tabindex="0"
+        data-bs-toggle="popover"
+        data-bs-trigger="hover"
+        data-bs-content="this is some info"
+      ></i>
+      <i class="fa fa-car text-danger"></i>
+      <i class="fa fa-car"></i>
+
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenu2"
+          data-bs-toggle="dropdown"
+          data-bs-auto-close="inside"
+          aria-expanded="false"
+        >
+          Dropdown
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><button class="dropdown-item" type="button">Action</button></li>
+          <li>
+            <button class="dropdown-item" type="button">Another action</button>
+          </li>
+          <li>
+            <button class="dropdown-item" type="button">
+              Something else here
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        <a
+          class="btn btn-primary"
+          data-bs-toggle="collapse"
+          href="#multiCollapseExample1"
+          role="button"
+          aria-expanded="false"
+          aria-controls="multiCollapseExample1"
+          >Toggle first element</a
+        >
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#multiCollapseExample2"
+          aria-expanded="false"
+          aria-controls="multiCollapseExample2"
+        >
+          Toggle second element
+        </button>
+        <button
+          class="btn btn-primary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target=".multi-collapse"
+          aria-expanded="false"
+          aria-controls="multiCollapseExample1 multiCollapseExample2"
+        >
+          Toggle both elements
+        </button>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              Some placeholder content for the first collapse component of this
+              multi-collapse example. This panel is hidden by default but
+              revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+              Some placeholder content for the second collapse component of this
+              multi-collapse example. This panel is hidden by default but
+              revealed when the user activates the relevant trigger.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
