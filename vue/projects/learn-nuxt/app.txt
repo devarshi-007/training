@@ -1,0 +1,14 @@
+<script setup>
+// useServerSeoMeta({
+//   title: 'My Amazing Site',
+//   ogTitle: 'My Amazing Site',
+//   description: 'This is my amazing site, let me tell you all about it.',
+//   ogDescription: 'This is my amazing site, let me tell you all about it.',
+//   ogImage: '../assets/nuxt.png',
+//   twitterCard: 'summary_large_image',
+// })
+</script>
+
+<template>
+  <h1>mm</h1>
+</template>

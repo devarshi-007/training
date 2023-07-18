@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        background-color: blueviolet;
+        height: 100vh;
+        width: 100%;
+        color: rgb(0, 0, 0);
+      }
+      .col {
+        background: red;
+        flex-grow: 1;
+        height: 100%;
+      }
+      #minRow > * {
+        padding: 5px;
+        background: pink;
+      }
+    </style>
+  </head>
+  <body style="margin: 0">
+    <main
+      role="main"
+      style="display: flex; background-color: cadetblue; align-items: center"
+    >
+      <div
+        style="
+          background-color: aliceblue;
+          display: grid;
+          width: 100%;
+          gap: 5px;
+          grid-template-rows: 1;
+          grid-template-columns: repeat(4, 1fr);
+          text-align: center;
+        "
+        id="minRow"
+      >
+        <div>100</div>
+        <div>100</div>
+        <div>100</div>
+        <div>100</div>
+      </div>
+    </main>
+  </body>
+</html>

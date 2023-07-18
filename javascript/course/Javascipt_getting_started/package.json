@@ -1,0 +1,15 @@
+{
+  "name": "javascipt_getting_started",
+  "version": "1.0.0",
+  "description": "course 1. javascript:getting started",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "basics"
+  ],
+  "type": "module",
+  "author": "jay ponda",
+  "license": "ISC"
+}
